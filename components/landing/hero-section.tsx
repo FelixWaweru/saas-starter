@@ -12,13 +12,31 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-            Dispersal
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Your Team of AI Agents
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl"
+          >
+            Build Your SaaS
+            <span className="block text-orange-500">Faster Than Ever</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            Launch your SaaS product in record time with our powerful,
+            ready-to-use template. Packed with modern technologies and
+            essential integrations.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-10 flex items-center justify-center gap-x-6"
+          >
             <Link href="/sign-up">
               <Button size="lg" className="rounded-full">
                 Get Started
@@ -29,7 +47,7 @@ export function HeroSection() {
                 View Pricing
               </Button>
             </Link>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </div>
